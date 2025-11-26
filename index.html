@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTL6D79ZZ4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BTL6D79ZZ4');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Poppy Playtime Unblocked - GNHUSTGames</title>
+    <meta name="description" content="Discover the thrilling world of Poppy Playtime Unblocked, a captivating horror game where players unravel the mysteries of an abandoned toy factory. Unleash your courage and solve puzzles as you confront eerie toys and uncover dark secrets. Are you ready to face the unknown? Dive into the chilling adventure of Poppy Playtime now!">
+    <meta property="og:image" content="https://gnhustgames.github.io/poppyplaytime.jpg">
+    <link rel="stylesheet" href="https://gnhustgames.github.io/css/logo.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="logo.jpg">
+</head>
+
+<script src="./UnityLoader.js"></script>
+<script src="./UnityProgress.js"></script>
+<script src="./p-p.js"></script>
+<script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "./p-p.json", {
+        onProgress: UnityProgress,
+        Module: {
+            onRuntimeInitialized: function() {
+                UnityProgress(gameInstance, "complete")
+            }
+        }
+    });
+</script>
+
+<body>
+    <div class="logo-homepage" id="logo" style="position: absolute; top:10%; ">
+        <a href="https://gnhustgames.github.io/"><button>
+        <p>GNHUST Games</p>
+        <img src="https://gnhustgames.github.io/assets/imageLogo/logo.jpg" alt="">
+    </button></a>
+    </div>
+    <script>
+        function checkScreenSize() {
+            var hiddenBlock = document.querySelector('#logo');
+            if (window.innerWidth > 1200) {
+                hiddenBlock.style.display = "block";
+            } else {
+                hiddenBlock.style.display = "none";
+            }
+        }
+
+        // Add an event listener to check the size whenever the window is load or réize
+        window.addEventListener('load', checkScreenSize);
+        window.addEventListener('resize', checkScreenSize);
+        // Initial check when the page loads
+        checkScreenSize();
+    </script>
+    <div class="webgl-content">
+        <div id="gameContainer" style="width: 100%; height: 100%; margin: auto"></div>
+    </div>
+</body>
+
+
+</html>
